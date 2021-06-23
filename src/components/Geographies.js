@@ -8,13 +8,14 @@ import useGeographies from "./useGeographies"
 const Geographies = ({
   geography,
   children,
+  clickedStates,
   parseGeographies,
   className = "",
   ...restProps
 }) => {
   const { path, projection } = useContext(MapContext)
   const { geographies, outline, borders } = useGeographies({ geography, parseGeographies })
-
+  debugger;
   return (
     <g className={`rsm-geographies ${className}`} {...restProps}>
       {
